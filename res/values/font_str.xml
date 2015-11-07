@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="roboto_medium">roboto_medium</string>
+    <string name="Helvetica_Neue_Medium">Helvetica_Neue_Medium</string>
+    <string name="Helvetica_Neue_Regular">Helvetica_Neue_Regular</string>
+    <string name="Helvetica_Neue_bold">Helvetica_Neue_bold</string>
+    <string name="Helvetica_Neue_LTPro_Lt">Helvetica_Neue_LTPro_Lt </string>
+    <string name="Helvetica_Neue_light">Helvetica_Neue_light </string>
+    <string name="Arial_Bold">Arial_Bold</string>
+    <string name="Arial_Regular">Arial_Regular</string>
+    
+    <string name="dinpro_bold">dinpro_bold</string>
+    <string name="dinpro_light">dinpro_light</string>
+    <string name="dinpro_medium">dinpro_medium</string>
+    <string name="dinpro_regular">dinpro_regular</string>
+   
+</resources>
+

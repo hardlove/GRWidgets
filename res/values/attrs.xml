@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="textFont" format="string" />
+
+    <declare-styleable name="GRTextViewPlus">
+        
+        <attr name="textFont" />
+        
+    </declare-styleable>
+    
+    
+    <declare-styleable name="GRButtonPlus">
+        
+        <attr name="textFont" />
+        
+    </declare-styleable>
+    
+    <declare-styleable name="GRImagePlus">
+        
+        <attr name="imageType" format="integer">
+            
+            <enum name="rectangel" value="1"/> 
+            <enum name="voval" value="2"/> 
+    
+        </attr>
+         <attr name="outLineColor" format="color" />
+         <attr name="outLineWidth" format="dimension" />
+        
+    </declare-styleable>
+    
+    <declare-styleable name="GREditTextPlus">
+        
+        <attr name="textFont" />
+        
+    </declare-styleable>
+    
+      <declare-styleable name="GRLetterListView">
+        
+        <attr name="textFont" />
+         <attr name="cellBackgroundColor" format="color" />
+         <attr name="cellRadius" format="dimension" />
+        
+    </declare-styleable>
+
+</resources>
