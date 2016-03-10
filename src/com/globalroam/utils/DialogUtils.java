@@ -47,7 +47,7 @@ public class DialogUtils {
 	 * @param okListenter:点击按钮的回调
 	 */
 	public static Dialog showOKDialog(Context context,String title,String content,final OkListener okListenter){
-		final GRDialogPlus dialog = new GRDialogPlus(context);
+		final GRDialogPlus dialog = new GRDialogPlus(context,R.style.customdialog);
 		View root = LayoutInflater.from(context).inflate(R.layout.dialog_ok_layout, null);
 		dialog.setContentView(root);
 		
@@ -86,7 +86,7 @@ public class DialogUtils {
 	 * @param context
 	 */
 	public static Dialog showOKCancelDialog(Context context, String title,String content,final OkListener okListenter,final CancelListener cancelListener){
-		final GRDialogPlus dialog = new GRDialogPlus(context);
+		final GRDialogPlus dialog = new GRDialogPlus(context,R.style.customdialog);
 		View root = LayoutInflater.from(context).inflate(R.layout.dialog_ok_cancel_layout, null);
 		dialog.setContentView(root);
 		
