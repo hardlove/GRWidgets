@@ -1,7 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="sticker_icon_prew_size">64dp</dimen>
+    <dimen name="tab_bottom_menu_height">54.0dip</dimen>
+    <dimen name="image_detail_pager_margin">3dp</dimen>
+    <dimen name="bottom_tab_padding_drawable">3.0dip</dimen>
+    <dimen name="bottom_tab_padding_up">3.66dip</dimen>
+    <dimen name="bottom_tab_font_size">12sp</dimen>
+    <dimen name="call_log_icon_margin">4dip</dimen>
+    <dimen name="call_log_call_action_size">32dip</dimen>
+    <dimen name="call_log_call_action_width">52dip</dimen>
+    <dimen name="call_log_inner_margin">15dip</dimen>
+    <dimen name="call_log_outer_margin">0dip</dimen>
+    <dimen name="call_log_indent_margin">24dip</dimen>
+    <dimen name="call_log_list_item_height">56dip</dimen>
+    <dimen name="call_log_list_contact_photo_size">64dip</dimen>
+    <dimen name="call_detail_contact_name_margin">24dip</dimen>
+    <dimen name="call_detail_button_spacing">2dip</dimen>
+    <dimen name="slider_height">300dip</dimen>
+    <dimen name="TitleTextSize">18dp</dimen>
+    <dimen name="LargeTextSize">16dp</dimen>
+    <dimen name="LargestTextSize">30dp</dimen>
+    <dimen name="dialpad_digits_text_size2">25sp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_menu_item_height">40dp</dimen>
+    <dimen name="popupWindow_width">130dp</dimen>
+    <dimen name="key_padding">0.0dip</dimen>
+    <dimen name="max_name_200">200dip</dimen>
+    <dimen name="max_name_length">200dip</dimen>
+    <dimen name="chat_name_max_width">120dp</dimen>
+    <dimen name="chat_max_width">240dp</dimen>
+    <dimen name="slidingmenu_offset">90dp</dimen>
+    <dimen name="slidingmenu_offset_right">50dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="facebook_length">50dp</dimen>
+    <dimen name="chat_head_img_size">57.5dp</dimen>
+    <dimen name="chat_group_setting_item_height">60.66dip</dimen>
+   
+    <dimen name="double_setting_item_height">73dp</dimen>
+    <dimen name="chat_im_voice_rec_width">140dp</dimen>
+     <dimen name="chat_menu_dialog_cancel_btn_padding">5dp</dimen>
+     <dimen name="chat_menu_dialog_cancel_btn_height">49dp</dimen>
+    <dimen name="chat_im_status_text_size">@dimen/text_size_38_px</dimen>
+    <!-- dialog width -->
+    <dimen name="dialog_witdh">300dp</dimen>
+    <dimen name="phone_type_margin">40dip</dimen>
+    <dimen name="top_bar_height">53.3dip</dimen>
+    <dimen name="call_log_phone_type_margin">11dip</dimen>
+    <dimen name="profile_facebook_margin">10dip</dimen>
+    <dimen name="call_log_rcs_status_margin">7dip</dimen>
+    <dimen name="chat_item_voice_margin">-4dip</dimen>
+    <dimen name="notification_icon_size">48dip</dimen>
+    <dimen name="dialer_button_size">80dip</dimen>
+    <dimen name="chat_box_menu_height">122.67dip</dimen>
+    <dimen name="chat_box_menu_emotion_height">190dip</dimen>
+    <dimen name="chat_box_img_width">196.6dip</dimen>
+    <dimen name="chat_box_img_height">123.6dip</dimen>
+    <dimen name="chat_box_message_margin_padding_right">8dip</dimen><!-- 聊天界面内容距离右边界的距离 -->
+     <dimen name="chat_box_message_margin_padding_left">0dp</dimen><!-- 聊天界面内容距离左边界的距离 -->
+    <dimen name="chat_box_message_margin_space">37dip</dimen>
+    <dimen name="chat_box_message_margin_space_receive">67dp</dimen>
+    <dimen name="chat_box_message_margin_space_send">67dip</dimen>
+    <dimen name="chat_box_location_width">168dip</dimen>
+    <dimen name="chat_box_location_height">100dp</dimen>
+    <dimen name="chat_box_video_width">196dip</dimen>
+    <dimen name="chat_box_video_height">124dip</dimen>
+    <dimen name="chat_box_voice_width">241.0dip</dimen>
+    <dimen name="chat_box_vcard_width">195.3dp</dimen>
+    <!-- sign up margin -->
+    <dimen name="sign_up_margin">28.3dip</dimen>
+    <dimen name="text_size_20_px">6.7sp</dimen>
+    <dimen name="text_size_30_px">10sp</dimen>
+    <dimen name="text_size_46_px">15.3sp</dimen>
+    <dimen name="sing_up_contury_code_size">15.3sp</dimen>
+    <dimen name="text_size_50_px">16.6sp</dimen>
+    <dimen name="text_size_66_px">22sp</dimen>
+    <dimen name="text_size_54_px">18sp</dimen>
+     <dimen name="px_286_dip">95.33dip</dimen>
+    <dimen name="text_size_38_px">12.6sp</dimen>
+    <dimen name="f_px_6_pid">-2dp</dimen>
+    <dimen name="text_size_34_px">11.3sp</dimen>
+    <dimen name="text_size_33_px">11sp</dimen>
+     <dimen name="f_px_14_dip">-4.67dip</dimen>
+     <dimen name="f_px_42_dip">-14dip</dimen>
+       <dimen name="f_px_46.5_dip">-15.5dip</dimen>
+          <dimen name="f_px_3_dip">-1dp</dimen>
+            <dimen name="f_px_24_dip">-8dp</dimen>
+    <dimen name="text_size_48_px">16sp</dimen>
+     <dimen name="text_size_36_px">12sp</dimen>
+    <dimen name="text_size_58_px">19.3sp</dimen>
+    <dimen name="cell_separator_text_size">19.3sp</dimen>
+    
+    <dimen name="text_size_60_px">20sp</dimen>
+    <dimen name="text_size_42_px">14sp</dimen>
+    <dimen name="call_dialog_text_size">14sp</dimen>
+     <dimen name="px_68_dip">22.66dip</dimen>
+    <dimen name="px_145_dip">48.33dp</dimen>
+     <dimen name="px_61_dip">20.33dip</dimen>
+    <dimen name="text_size_39_px">13sp</dimen>
+        <dimen name="text_size_72_px">24sp</dimen>
+    <dimen name="text_size_62_px">20.6sp</dimen>
+    <dimen name="text_size_90_px">30sp</dimen>
+    <dimen name="top_content_textSize">20.6sp</dimen>
+    <dimen name="no_match_content_textSize">20sp</dimen>
+    
+    <dimen name="text_size_70_px">23.3sp</dimen>
+    <dimen name="swap_call_text_size">23.3sp</dimen>
+    <dimen name="text_size_96_px">33sp</dimen>
+    <dimen name="edit_linear_text_size">33sp</dimen>
+ 
+    <dimen name="btn_edit_margin_right">0dp</dimen>
+   
+    <!-- item dimen px to dp and dip -->
+     
+    <!-- contactinfo list -->
+    <dimen name="px_48">16dp</dimen>
+    <dimen name="px_60">20dip</dimen>
+    <dimen name="px_15">5dp</dimen>
+    
+    <dimen name="contacts_icom_margin_left">16dp</dimen>
+    <dimen name="px_15_dip">5dip</dimen>
+    <dimen name="px_36">12dp</dimen>
+    <dimen name="px_36_dip">12dip</dimen>
+    <dimen name="px_216_dip">72dip</dimen>
 
+    <!-- contactinfo list item -->
+    <dimen name="px_108">36dip</dimen>
+    <dimen name="px_50">16.66dip</dimen>
+    <dimen name="call_day_margin_left">16.66dip</dimen>
+    <dimen name="px_24">8dp</dimen>
+    <dimen name="contact_list_letterListView_margin_bottom">8dp</dimen>
+    <dimen name="select_contact_list_letterListView_margin_bottom">60dp</dimen>
+    <dimen name="contact_list_letterListView_margin_right">0dp</dimen>
+    <dimen name="px_1_dip">1dip</dimen>
+    <dimen name="px_46">15.33dip</dimen>
+    <dimen name="px_180">60dip</dimen>
+      <dimen name="px_252_dip">84dip</dimen>
+    <dimen name="px_7">2.33dp</dimen>
+    <dimen name="px_114">38dp</dimen>
+         <dimen name="px_20_dip">6.66dip</dimen>
+    <dimen name="px_44">14.66dp</dimen>
+     <dimen name="px_228">76dp</dimen>
+    <dimen name="px_45">15dp</dimen>
+    <dimen name="px_37">12.33dp</dimen>
+    <dimen name="call_type_margin_left">12.33dp</dimen>
+    <dimen name="px_119">39.66dp</dimen>
+
+    
+    <dimen name="px_negtiv_1">-1dp</dimen>
+    <dimen name="px_5">1.66dp</dimen>
+    <dimen name="px_220">73.33dp</dimen>
+    <dimen name="px_3">1dp</dimen>
+
+    <!-- view line -->
+     <dimen name="px_1">1px</dimen>
+     <dimen name="px_1_dp">0.33dp</dimen>
+    <dimen name="px_45_dip">15dip</dimen>
+
+
+    <!-- invite contacts list item -->
+    <dimen name="px_163_dip">54.33dip</dimen>
+    <dimen name="group_members_item_height">54.33dip</dimen>
+    <!-- dialog menu list layout -->
+    <dimen name="px_135">45dp</dimen>
+    <dimen name="px_135_dip">45dip</dimen>
+    <dimen name="px_6">2dp</dimen>
+    <dimen name="px_9">3dp</dimen>
+    <!-- audio -->
+    <dimen name="px_120">40dp</dimen>
+    <!-- call detail history item -->
+    <dimen name="px_52_dip">17.33dip</dimen>
+    
+    <dimen name="px_33_dip">11dip</dimen>
+    <dimen name="px_29_dip">9.67dp</dimen>
+    <dimen name="px_48_dip">16dip</dimen>
+    <dimen name="px_300_dip">100dip</dimen>
+    
+    <!-- chat bottom message menu item -->
+    <dimen name="px_negtive_13">-4.33dp</dimen>
+    <!-- contact choose list item -->
+    <dimen name="px_75">25dip</dimen>
+    
+    
+    <dimen name="px_51">17dp</dimen>
+    <dimen name="px_51_dip">17dip</dimen>
+    <dimen name="px_25">8.34dp</dimen>
+    <dimen name="px_30">10dp</dimen>
+    <dimen name="px_171">57dip</dimen>
+    <dimen name="px_4">1.33dp</dimen>
+      <dimen name="px_66">22dp</dimen>
+      <dimen name="px_66_dip">22dp</dimen>
+    <dimen name="px_18_dip">6dip</dimen>
+    <dimen name="px_120_dip">40dip</dimen>
+    <dimen name="px_63_dip">21dip</dimen>
+     <dimen name="px_4.5_dip">1.5dip</dimen>
+    <dimen name="f_px_5_dip">-1.66dip</dimen>
+    <dimen name="f_px_7_dip">-2.33dip</dimen>
+    <dimen name="px_94_dip">31.33dip</dimen>
+      <dimen name="f_px_120_dip">-40dp</dimen>
+    <dimen name="f_px_15_dip">-5dip</dimen>
+    <dimen name="f_px_21_dip">-7dip</dimen>
+    <dimen name="video_previws_gallery_text_margin_left">-7dip</dimen>
+      <dimen name="video_previws_send_text_margin_left">0dip</dimen>
+    <dimen name="f_px_105_dip">-35dip</dimen>
+    
+     <dimen name="px_54_dip">18dip</dimen>
+       <dimen name="px_150_dip">50dip</dimen>
+       <dimen name="px_43_dip">14.33dip</dimen>
+       <dimen name="px_47_dip">15.66dip</dimen>
+     <dimen name="f_px_16_dip">-5.33dp</dimen>
+     <dimen name="f_px_19_dip">-6.33dp</dimen>
+     <dimen name="f_px_10_dip">-3.33dp</dimen>
+     <dimen name="retak_margin_left">-3.33dp</dimen>
+     
+        <dimen name="px_14_dip">4.66dip</dimen>
+        <dimen name="px_144_dip">48dp</dimen>
+            <dimen name="px_73_dip">24.33dip</dimen>
+            <dimen name="px_2_dip">0.66dip</dimen>
+            
+      <dimen name="px_22_dip">7.33dip</dimen>
+    <dimen name="px_30_dip">10dip</dimen>
+    <dimen name="px_420_dip">140dip</dimen>
+    <dimen name="incall_menu_control_margin_top">30dip</dimen>
+    <dimen name="member_label_margin_bottom">10dip</dimen>
+    <dimen name="member_label_margin_top">20dip</dimen>
+    <dimen name="px_105_dip">35dip</dimen>
+     <dimen name="px_138_dip">46dip</dimen>
+     <dimen name="dialer_input_number_height">113dip</dimen>
+    <dimen name="px_294_dip">98dip</dimen>
+    <dimen name="px_297_dip">99dp</dimen>
+    <dimen name="px_271.8_dip">90.6dp</dimen>
+    <dimen name="px_152_dip">50.66dp</dimen>
+    
+    <dimen name="top_bar_margin">10dip</dimen>
+    
+    <dimen name="px_19_dip">6.33dip</dimen>
+    <dimen name="px_60_dip">20dip</dimen>
+    <dimen name="px_180_dip">60dip</dimen>
+    <dimen name="px_71_dip">23.66dip</dimen>
+    <!-- contact detail phone list item2 -->
+    <dimen name="px_182_dip">60.66dip</dimen>
+    <dimen name="px_46.5_dip">15.5dip</dimen>
+    <dimen name="px_2">0.66dp</dimen>
+    <dimen name="px_27">9dp</dimen>
+    <dimen name="px_34_dip">11.33dip</dimen>
+    <dimen name="px_35_dip">11.66dip</dimen>
+    <dimen name="px_199">66.33dp</dimen>
+    <dimen name="px_39_dip">13dip</dimen>
+    <dimen name="px_122_dip">40.66dip</dimen>
+    <dimen name="px_33">11dp</dimen>
+    <dimen name="px_27_dip">9dip</dimen>
+    <dimen name="contact_message_all_margin_top">9dip</dimen>
+    <dimen name="px_28_dip">9.33dip</dimen>
+    <dimen name="contact_list_view_margin_top">9.33dip</dimen>
+    <dimen name="px_21_dip">7dip</dimen>
+        <dimen name="f_px_2_dip">-0.66dip</dimen>
+         <dimen name="px_86_dip">28.66dp</dimen>
+    <dimen name="px_12">4dp</dimen>
+    <dimen name="px_12_dip">4dip</dimen>
+    <dimen name="px_6_dip">2dip</dimen>
+     <dimen name="f_px_1_dip">-0.33dp</dimen>
+     <dimen name="px_192_dip">64dip</dimen>
+     <dimen name="dialer_text_size">14sp</dimen>
+    <dimen name="px_108_dip">36dip</dimen>
+    <dimen name="px_510_dip">170dip</dimen>
+    <dimen name="px_210_dip">70dip</dimen>
+    <dimen name="px_8_dip">2.66dip</dimen>
+    <dimen name="px_38">12.6dp</dimen>
+    <dimen name="f_px_12_dip">-4dip</dimen>
+    <dimen name="px_60_sp">20sp</dimen>
+    <dimen name="px_7_dip">2.34dip</dimen>
+    <dimen name="px_7.5_dip">2.5dip</dimen>
+    <dimen name="px_99_dip">33dip</dimen>
+    <dimen name="px_195_dip">65dip</dimen>
+    <dimen name="px_90_dip">30dip</dimen>
+    <dimen name="px_900_dip">300dip</dimen>
+    <!-- country code list -->
+    <dimen name="px_0.5">.15dip</dimen>
+    <dimen name="px_54_sp">18sp</dimen>
+    <dimen name="px_70_dip">23.66dip</dimen>
+    <dimen name="px_35">11.66dp</dimen>
+    <dimen name="px_240_dip">80dip</dimen>
+    <dimen name="px_48_sp">16sp</dimen>
+    <!-- gallery picker item -->
+    <dimen name="px_426_dip">142dip</dimen>
+    <dimen name="px_444_dip">148dip</dimen>
+    <dimen name="outline_width">1.5dp</dimen>
+    <dimen name="px_9_dip">3dip</dimen>
+    <dimen name="px_42_sp">14sp</dimen>
+    <!-- message chat im file item -->
+    <dimen name="px_72_dip">24dip</dimen>
+    <dimen name="px_720">240dp</dimen>
+    <dimen name="px_10">3.3dp</dimen>
+    <dimen name="px_132">44dp</dimen>
+    <dimen name="px_96">32dp</dimen>
+    <!-- message chat im file itemrecive -->
+    <dimen name="px_90">30dp</dimen>
+    <dimen name="px_72">24dp</dimen>
+    <dimen name="px_18">6dp</dimen>
+    <dimen name="px_420">140dp</dimen>
+    <dimen name="px_negtive_12">-4dp</dimen>
+    <dimen name="px_540">180dp</dimen>
+    <dimen name="px_129">43dp</dimen>
+    <!-- message group msg item -->
+    <dimen name="px_21">7dp</dimen>
+    <dimen name="px_56_sp">18.6sp</dimen>
+    <dimen name="px_231">77dp</dimen>
+    <dimen name="px_47">15.6dp</dimen>
+    <dimen name="px_23">7.6dp</dimen>
+    <dimen name="px_negtiv_2">-0.6dp</dimen>
+    <dimen name="px_42">14dp</dimen>
+    <dimen name="px_42_dip">14dp</dimen>
+    <dimen name="exit_group_margin_top">14dp</dimen>
+    <dimen name="px_172_dip">57.33dip</dimen>
+      <dimen name="px_53_dip">17.66dip</dimen>
+       <dimen name="px_312_dip">104dip</dimen>
+     <dimen name="px_10_dip">3.33dp</dimen>
+      <dimen name="px_132_dip">44dip</dimen>
+     <dimen name="px_16_dip">5.33dp</dimen>
+    <dimen name="px_234">78dp</dimen>
+    <dimen name="px_126">42dp</dimen>
+    <dimen name="px_19">6.33dp</dimen>
+     <dimen name="px_95_dip">31.66dip</dimen>
+     <dimen name="px_32.5_dip">10.8dip</dimen>
+         <dimen name="px_17_dip">5.66dp</dimen>
+    <dimen name="px_negtiv_6">-2dp</dimen>
+    <dimen name="px_37.8_sp">12.6sp</dimen>
+    <dimen name="px_negtiv_30">-10dp</dimen>
+    <!-- recent list item -->
+    <dimen name="px_34">11.33dp</dimen>
+    <dimen name="px_52_sp">24sp</dimen>
+    <dimen name="px_110">36.67dip</dimen>
+    <dimen name="px_149_dip">49.66dip</dimen>
+    <dimen name="px_24_dip">8dip</dimen>
+    <dimen name="px_720_dip">240dip</dimen>
+    <dimen name="audio_seekbar_padding_right">8dip</dimen>
+    
+    <dimen name="choose_forward_from_contact_margin_right">0dip</dimen>
+    <dimen name="f_px_4_dip">-1.3dp</dimen>
+    <dimen name="f_px_18_dip">-6dip</dimen>
+     <dimen name="px_11_dip">3.67dip</dimen>
+    <dimen name="px_3_dip">1dip</dimen>
+    <dimen name="px_4_dip">1.3dip</dimen>
+    <dimen name="px_26_dip">8.6dip</dimen>
+    <dimen name="px_32_dip">10.6dip</dimen>
+    <dimen name="px_87_dip">29dip</dimen>
+    <dimen name="recent_list_icon_height">29dip</dimen>
+    <dimen name="px_5_dip">1.66dip</dimen>
+    <dimen name="px_31_dip">10.33dip</dimen>
+    <dimen name="mute_group_text_margin_top">10.33dip</dimen>
+    <dimen name="px_46_dip">15.33dip</dimen>
+     <dimen name="px_25_dip">8.33dp</dimen>
+       <dimen name="px_79_dip">26.33dp</dimen>
+    <dimen name="px_143_dip">47.66dip</dimen>
+
+    <!-- mutil call -->
+    <dimen name="swap_call_top_bar_height">66.67dip</dimen>
+    <dimen name="call_onhold_bg_width">140dp</dimen>
+    <dimen name="swap_call_head_margin_top_height">10dp</dimen>
+    <dimen name="swap_call_hold_image_size">40dp</dimen>
+    <dimen name="swap_call_hold_image_margin_left">10dp</dimen>
+    <dimen name="swap_call_hold_image_margin_right">10dp</dimen>
+    <dimen name="swap_call_unhold_margin_top">10dp</dimen>
+   
+     <dimen name="conference_head_image_height">95dp</dimen>
+      <dimen name="conference_head_image_marging_left">14dp</dimen>
+     <dimen name="conference_head_image_top">10dp</dimen>
+     <!-- Call Wait -->
+          <dimen name="call_wait_name_margin_top">10dp</dimen>
+     
+     
+    <!-- top bar search -->
+    <dimen name="top_back_bar_left">3.33dp</dimen>
+     <dimen name="top_search_bar_left">9dp</dimen>
+     <dimen name="my_editText_height">40dip</dimen>
+     <dimen name="calls_or_contacts_top_bar">40dip</dimen>
+     
+     
+     <!-- Compose -->
+    <dimen name="no_conversions_tip_text_size">22sp</dimen>
+    <dimen name="no_conversation_text_size">16.6sp</dimen>
+    <dimen name="compose_margin_left">28.33dp</dimen>
+    <dimen name="compose_margin_top">55dp</dimen>
+     <dimen name="no_conversation_text_margin_left_right">20dp</dimen>
+         <dimen name="no_conversation_text_margin_top">15dp</dimen>
+    <dimen name="compose_margin_right">28.33dp</dimen>
+    <dimen name="compose_text_size">20sp</dimen>
+    
+    <!-- Calls -->
+    <dimen name="calls_history_text_phone_margin_top">4dp</dimen>
+    <dimen name="history_call_day_height">36.67dip</dimen>
+    <dimen name="history_call_day_text_size">16.6sp</dimen>
+    <dimen name="list_view_item_height">49.66dip</dimen>
+    <dimen name="number_text_size">15.3sp</dimen>
+    <dimen name="call_time_or_unread_text_size">12.6sp</dimen>
+    <dimen name="decline_margin_bottom_size">38.33dip</dimen><!-- for incoming view -->
+    <dimen name="decline_margin_top_size">8dip</dimen><!-- for incoming view -->
+    <dimen name="recent_list_icon_margin_right">0dip</dimen><!-- for incoming view -->
+    <dimen name="call_history_image_margin_left">16.66dip</dimen><!-- for incoming view -->
+    <dimen name="call_history_icon_size">38dip</dimen>
+    <dimen name="call_history_icon_between_margin">0dip</dimen>
+    
+    
+    <!-- Calls History -->
+    <dimen name="calls_history_time_margin">100dip</dimen><!-- 显示时间的间距 -->
+    <dimen name="calls_history_text_size">15.3sp</dimen><!--item text size -->
+    <dimen name="phone_or_history_text_size">16.6sp</dimen>
+    <dimen name="mobile_text_size">18sp</dimen>
+    <dimen name="contact_number_text_size">15.3sp</dimen>
+    
+    <!-- Contacts -->
+    <dimen name="add_action_size">40dip</dimen>
+    <dimen name="contact_list_item_cell_separator_height">25dip</dimen>
+    <dimen name="contact_list_item_height">54.33dip</dimen>
+        <dimen name="contacts_item_icon_size">39.66dp</dimen>
+    <dimen name="cell_phone_number_type_text_size">12.6sp</dimen>
+    <dimen name="cell_note_text_size">14sp</dimen>
+    <dimen name="contact_info_phone_text_height">38dp</dimen>
+     <dimen name="contact_info_contact_name_margin_left">11.66dip</dimen>
+     <dimen name="contact_info_contact_big_icon_size">57dip</dimen>
+       <dimen name="contact_info_rob_thomas_height">76dip</dimen>
+     <dimen name="contact_cell_name_margin_left">15dip</dimen>
+     <dimen name="contact_mobile_margin_right">8.34dip</dimen>
+     <dimen name="contact_list_letterListView_width">19dip</dimen>
+     <dimen name="contact_info_invite_to_message_max_height">50dp</dimen>
+     
+    <!-- dialer keypad -->
+      <dimen name="dail_keypad_margin">38dp</dimen>
+    
+    <!-- Chats  -->
+     <dimen name="conversaiton_search_layout_margin_right">7dp</dimen>
+    <dimen name="chat_conversation_item_height">77dp</dimen>
+    <dimen name="chat_switch_more_option_height">32dp</dimen><!--聊天界底部更多或表情高度  -->
+    <dimen name="chat_send_container_height">50dp</dimen><!--聊天界底部右边话筒或send高度  -->
+    <dimen name="voice_cancel_trashcan_height">48.0dip</dimen><!--聊天界底部voice_cancel_trashcan  -->
+    <dimen name="chat_input_text_min_height">38dp</dimen><!--聊天界面文字输入框最小高度  -->
+    <dimen name="add_conversation_margin_right">9dp</dimen>
+    <dimen name="delete_chat_checkbox_margin_left">9dp</dimen>
+    <dimen name="delete_chat_checkbox_sizt">29dp</dimen>
+   <dimen name="time_line_layout_margin_top">1.66dp</dimen>
+   <dimen name="message_chat_item_line_margin_bottom">3dp</dimen>
+   <dimen name="timeline_container_margin_top">-2dp</dimen>
+<dimen name="timeline_container_margin_bottom">5dp</dimen>
+    
+    
+    <!-- Message_chat_im -->
+    <dimen name="message_chat_in_icon_size">40dp</dimen><!-- 单聊界面 联系人头像 -->
+    <dimen name="menu_for_immessageing_padding">10dp</dimen>
+    <dimen name="menu_for_immessageing_width">150dp</dimen>
+    
+    
+    <!-- Group Members -->
+    <dimen name="group_members_item_icon_size">39.66dp</dimen>
+    <dimen name="group_members_chat_checkbox_maigin_left">15dip</dimen>
+    <dimen name="group_members_chat_checkbox_between_icon">11dip</dimen>
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Group Name -->
+    <dimen  name="group_name_height">38.66dip</dimen>
+    
+     <!-- Group Info -->
+     <dimen  name="group_info_big_icon_size">56.66dp</dimen>
+     <dimen  name="message_group_chat_setting_icon_margin_right_">8dp</dimen>
+     <dimen  name="group_add_img_size">48dp</dimen>
+     <dimen  name="group_chat_exit_padding">7.5dp</dimen> 
+      <dimen  name="group_green_text_size">16sp</dimen> <!-- 绿色颜色字体 -->
+      <dimen name="message_chat_group_meber_list_height">244dip</dimen>
+      <dimen name="message_chat_group_meber_icon_margin_top_bottom">1dip</dimen>
+      
+    <!-- More -->
+     <dimen name="setting_item_height">47.66dp</dimen>
+     <dimen name="profile_green_item_height">52dp</dimen><!-- profile 界面绿色条目高度  -->
+    <dimen name="more_item_margin_left">14.67dip</dimen>
+      <dimen name="more_item_line_margin_left">16dip</dimen>
+    <dimen name="more_item_line_margin_right">17dip</dimen>
+        <dimen name="more_item_jiantou_margin_right">13dp</dimen>
+          <dimen name="more_item_switch_margin_right">14dp</dimen>
+     
+     <dimen name="profile_head_image_height">140.66dp</dimen>
+     <dimen name="profile_head_image_margin_top_height">0dp</dimen>
+     <dimen name="profile_top_layout_height">163dp</dimen>
+     <dimen name="editHeadImageButton_margin_right">16dp</dimen>
+     <dimen name="editHeadImageButton_margin_bottom">6dp</dimen>
+     
+     <dimen name="contact_settings_item_height">47.66dp</dimen>
+     
+     <dimen name="help_item_height">46.66dp</dimen>
+     <dimen name="chat_call_fist_item_height">41.66dp</dimen>
+     <dimen name="about_first_layout_margin_top">9.33dp</dimen>
+     <dimen name="about_bottom_margin">12.66dp</dimen>
+     <dimen name="conference_head_image_margin">0dp</dimen>
+     <dimen name="conference_time_bottom">20dp</dimen>
+     
+     
+     
+    
+    <!-- common  -->
+    <dimen name="back_button_margin_left">4.33dp</dimen>
+    <dimen name="back_button_min_width">30dp</dimen>
+    <dimen name="top_right_button_margin_right">4.33dip</dimen><!-- 顶部右边控件距离右边距离 -->
+    <dimen name="top_right_global_cross_margin_right">4.33dip</dimen><!-- Contacts界面顶部加号 -->
+    <dimen name="top_right_button_parent_margin_right">4dp</dimen><!-- 顶部右边控件父控件距离右边距离 -->
+    <dimen name="switch_margin_right">14.33dip</dimen><!-- 开关距离右边的距离 -->
+    <dimen name="end_call_btn_tottom">37.66dip</dimen>
+ 
+    <!-- Profile -->
+    <dimen name="line_margin_left_or_right_0_25_dp">0dp</dimen>
+    <!-- Status -->
+    <dimen name="edit_button_size">40dp</dimen>
+     <dimen name="current_staus_height">35.66dp</dimen>
+     <dimen name="select_new_staus_margin_top">28.66dp</dimen>
+     
+     <dimen name="margin_4_or_12.5_dp">4dp</dimen>
+     <dimen name="margin_6.33_or_25_dp">6.33dp</dimen>
+        <dimen name="margin_5_or_15_dp">5dip</dimen>
+      <dimen name="margin_8_or_25_dp">8dp</dimen>
+     <dimen name="margin_11.66_or_25_dp">11.66dip</dimen>
+     <dimen name="margin_12_or_25_dp">12dip</dimen>
+      <dimen name="margin_12.33_or_25_dp">12.33dip</dimen>
+      <dimen name="margin_12.5_or_25_dp">12.5dip</dimen>
+      <dimen name="margin_14_or_25_dp">14dip</dimen>
+    <dimen name="margin_14.33_or_25_dp">14.33dip</dimen>
+    <dimen name="margin_14.33_or_27_dp">14.33dip</dimen>
+    <dimen name="margin_15_or_25_dp">15dip</dimen>
+    <dimen name="margin_15.33_or_25_dp">15.33dip</dimen>
+       <dimen name="margin_15.66_or_25_dp">15.66dip</dimen>
+       
+     <dimen name="margin_15.67_or_25_dp">15.67dip</dimen>
+     <dimen name="margin_16.67_or_25_dp">16.67dip</dimen>
+    <dimen name="margin_16_or_25_dp">16dip</dimen>
+    <dimen name="margin_16.33_or_25_dp">16.33dip</dimen>
+    <dimen name="margin_17_or_25_dp">17dip</dimen>
+    <dimen name="margin_17_or_40_dp">17dip</dimen>
+    <dimen name="cell_separator_margin_left">0dp</dimen>
+    <dimen name="cell_separator_pardding_left">17dp</dimen>
+    <dimen name="margin_17.33_or_25_dp">17.33dip</dimen>
+    <dimen name="margin_18_or_25_dp">18dip</dimen>
+    <dimen name="margin_21_or_25_dp">21dip</dimen>
+    <dimen name="margin_10_or_25_dp">10dip</dimen>
+    <dimen name="margin_10.66_or_25_dp">10.66dip</dimen>
+    <dimen name="margin_25_40_dp">25dip</dimen>
+    <dimen name="chat_call_settings_item_height">41.66dip</dimen>
+    <dimen name="chat_call_settings_item_margin_top">10dip</dimen>
+    
+     <!-- Call Forwarding -->
+     <dimen name="call_forwarding_item_heght">51.66dp</dimen>
+      <!--  Font Size-->
+     <dimen name="font_size_title_height">67dp</dimen>
+     <dimen name="font_size_item_height">48dp</dimen>
+    
+    
+     <!-- for call -->
+    <dimen name="endcall_or_answer_size">60dip</dimen>
+    <dimen name="endcall_or_answer_margin_size">15.66dip</dimen>
+    <dimen name="incall_menu_margin_size">15.66dip</dimen>
+    <dimen name="swap_call_menu_control_margin_left_right">0dip</dimen>
+    <dimen name="endcall_or_answer_layout_margin_top_size">10dp</dimen>
+    <dimen name="dialer_size">83.33dp</dimen>
+    <dimen name="dialer_layout_margin_left_right">0dp</dimen>
+    <dimen name="dialer_size_margin_left">23.6dp</dimen>
+    <dimen name="swap_call_btn_padding_top">0dp</dimen>
+    <dimen name="swap_call_btn_padding_bottom">0dp</dimen>
+    
+    <dimen name="incoming_heard_image_margin_top_size">40dip</dimen>
+    <dimen name="incoming_heard_image_size">132dip</dimen>
+    <dimen name="swap_call_unhold_image_size">110dip</dimen>
+    <dimen name="incoming_name_margin_heard_image_size">4dip</dimen><!-- 名字距离头像的距离 -->
+    
+    
+     <!-- dialog width -->
+      <string name="call_dialog_witdh_scacle">0.8407</string>
+   <string name="dialog_witdh_scacle">0.91</string>
+   <string name="otp_dialog_witdh_scacle">0.91</string>
+   <string name="single_check_dialog_witdh_scacle">0.91</string>
+   <string name="dialog_witdh_scacle_0.84_or_0.65">0.84</string><!-- ChatPopUpSubMenu.calss -->
+   <string name="ex_dialog_witdh_scacle_0.95_or_x">0.95</string><!-- ExDialog.calss -->
+   <string name="ex_dialog_height_scacle_0.80_or_x">0.80</string><!-- ExDialog.calss -->
+   
+
+	<dimen  name="option_title_dialog_title_height">50dp</dimen>    
+	<dimen  name="option_title_dialog_text_padding">11dp</dimen>  
+	<dimen  name="option_title_dialog_bottom_text_padding">11dp</dimen>  
+	<dimen  name="option_title_dialog_top_text_padding">12dp</dimen>  
+	<dimen  name="option_title_dialog_middle_text_padding">12dp</dimen>  
+	
+	<dimen  name="option_dialog_cancle_text_padding">11.33dp</dimen>  
+	<dimen  name="dialog_cofirmm_sel_min_heiht">77.34dp</dimen>  
+	
+	<dimen  name="dialog_cancle_ok_padding_top">10.8dp</dimen>  
+    <dimen  name="dialog_cancle_ok_padding_bottom">13dp</dimen>  
+    <dimen  name="call_dialog_cancle_padding_bottom">14.4dp</dimen>  
+    <dimen  name="call_dialog_cancle_padding_top">10.5dp</dimen>  
+	
+	
+	<!-- singn up -->
+	<dimen name="sign_up_img_padding_top">20dp</dimen>
+	<dimen name="sign_up_img_padding_bottom">20dp</dimen>
+	<dimen name="text_size_sign_up_welcom">21.6sp</dimen>
+	<dimen name="sms_tips_padding">40dp</dimen>
+		<dimen name="text_size_sign_up_welcom_padding_top">18.6dp</dimen>
+	<dimen name="sign_up_margin_left_right">28.3dip</dimen>
+	<dimen name="sign_up_conutry_container_margin_top">15dp</dimen>
+	<dimen name="sign_up_number_detect_container_margin_top">26dp</dimen>
+	 <dimen name="sing_up_contury_code_arrow_size">14dp</dimen>
+	 <dimen name="sing_up_terms_condition_text_size">15.3sp</dimen>
+<dimen name="sing_up_accept_checkbox_size">19.6dp</dimen>
+<dimen name="sing_up_terms_condition_margin_top">30dp</dimen>
+<dimen name="sing_up_enter_number_height">49dp</dimen>
+	<dimen name="sing_up_activate_btn_margin_top">34dp</dimen>
+		<dimen name="sing_up_activate_btn_padding">12.5dp</dimen>
+	<dimen name="sing_up_activate_btn_text_size">20sp</dimen>
+	<dimen name="sing_up_help_img_margin_top">76.5dp</dimen>
+	<dimen name="sing_up_help_img_size">30dp</dimen>
+	<dimen name="sing_up_send_otp_dialog_width">244dp</dimen>
+	<dimen name="sing_up_send_otp_dialog_height">180dp</dimen>
+	<dimen name="sing_up_send_otp_dialog_message_margin">18dp</dimen>
+	<dimen name="enter_otp_verify_btn_pading_top">11dp</dimen>
+	<dimen name="enter_otp_verify_btn_pading_bottom">14.2dp</dimen>
+	<dimen name="enter_otp_verify_btn_max_height">50dp</dimen>
+	<dimen name="enter_otp_verify_btn_margin_top">33dip</dimen>
+	<dimen name="other_more_info_margin_top">20.66dp</dimen>
+	<dimen name="enter_otp_num_padding">13.5dp</dimen>
+	<!-- Chat Bottom -->
+	<dimen name="otp_num_margin_top">32dp</dimen>
+	<dimen name="otp_verify_help_margin_top">41.6dp</dimen>
+	 <dimen name="volume_margin">4dp</dimen>
+	 <dimen name="chat_switch_ptt_text_margin_right">8dp</dimen>
+	 <dimen name="chat_switch_ptt_text_pressed_margin_right">8dp</dimen>
+	 <dimen name="message_chat_button_send_margin_right">7dp</dimen>
+	 <dimen name="message_chat_button_send_margin_left">5dp</dimen>
+	 <dimen name="chat_switch_more_option_margin_left">7.33dp</dimen>
+	
+	 <string name="chat_recording_too_short_tips_text_size">16</string>
+	  <dimen name="chat_recording_too_short_tips_board_height">40dp</dimen>
+	  <dimen name="chat_recording_too_short_tips_board_height_offy">4dp</dimen>
+	  <dimen name="chat_recording_too_short_above_record_btn">65dp</dimen>
+	  <dimen name="chat_recording_too_short_above_record_btn_offx">5dp</dimen>
+	  
+	  <dimen name="chat_emotion_size">32.4dp</dimen>
+	  <dimen name="item_iv_face_size">36dp</dimen>
+	  
+	  <dimen name="text_large_size">22sp</dimen>
+	  
+	   <item type="integer" name="max_menu_col">4</item>
+	   <item type="integer" name="letter_bg_radius">6</item>
+	   
+	   	<!-- 键盘 -->
+	<dimen name="numpad2_fisrst_lay_margin_top">1.33dp</dimen>
+	<dimen name="numpad2_second_lay_margin_top">10.33dp</dimen>
+	<dimen name="numpad2_third_lay_margin_top">8dp</dimen>
+	<dimen name="numpad2_four_lay_margin_top">8dp</dimen>
+	
+	<dimen name="dialer_bottom_line_margin_bottom">31.33dp</dimen>
+	<dimen name="keypad_contact_margin_right">0dp</dimen>
+	<dimen name="numpad2_five_lay_margin_top">16dp</dimen>
+	<dimen name="numpad2_five_lay_margin_bottom">0dp</dimen>
+	<dimen name="numpad2_top_line_margin_top">6dp</dimen>
+	<dimen name="numpad2_bottom_line_margin_top">15dp</dimen>
+	
+	<dimen name="gallery_picker_cell_size">28.33dp</dimen>
+	 <dimen name="gallery_picker_cell_icon_size">22.3dp</dimen>
+	 <dimen name="gallery_picker_cell_jianxi_size">1.33dp</dimen>
+	 <dimen name="albums_columnWidth">148dp</dimen>
+	 
+	 <dimen name="splash_logo_margin_top">157.3dp</dimen>
+	 <dimen name="rotate_loading_360_margin_top">50dp</dimen>
+	 <dimen name="starhub_log_margin_bottom">30dp</dimen>
+	 <dimen name="sendscan_image_size">64dp</dimen>
+	  <dimen name="sendscan_image_padding">4dp</dimen>
 </resources>

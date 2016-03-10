@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:foo="http://schemas.android.com/apk/res/com.starhub.messageplus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="240dp"
+    android:orientation="vertical"
+    android:splitMotionEvents="false" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_30_dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.globalroam.widgets.GRTextViewPlus
+            android:id="@+id/_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_99_dip"
+            android:layout_marginRight="@dimen/px_99_dip"
+            android:layout_marginTop="@dimen/px_30_dip"
+            android:background="#dddddd"
+            android:gravity="center"
+            android:paddingBottom="@dimen/px_24_dip"
+            android:paddingLeft="@dimen/px_15_dip"
+            android:paddingRight="@dimen/px_15_dip"
+            android:paddingTop="@dimen/px_24_dip"
+            android:text="sfss"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_50_px"
+            android:visibility="gone"
+            />
+
+        <com.globalroam.widgets.GRTextViewPlus
+            android:id="@+id/_reason"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="200"
+            android:layout_marginBottom="@dimen/px_4_dip"
+            android:layout_marginLeft="@dimen/px_30_dip"
+            android:layout_marginRight="@dimen/px_30_dip"
+            android:background="@null"
+            android:gravity="center"
+            android:lineSpacingExtra="-1.66dp"
+            android:minHeight="@dimen/dialog_cofirmm_sel_min_heiht"
+            android:paddingBottom="@dimen/px_44"
+            android:paddingLeft="@dimen/px_9_dip"
+            android:paddingRight="@dimen/px_6_dip"
+            android:paddingTop="@dimen/px_17_dip"
+            android:text=""
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_50_px"
+          />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+                  android:layout_marginTop="@dimen/px_6_dip"
+            android:background="@color/c2_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <!-- <com.globalroam.widgets.GRTextViewPlus
+                android:id="@+id/_cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="@dimen/px_30_dip"
+                android:paddingRight="@dimen/px_30_dip"
+                 android:paddingTop="@dimen/dialog_cancle_ok_padding_top"
+                android:paddingBottom="@dimen/dialog_cancle_ok_padding_bottom"
+                android:text="Cancel"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_58_px"
+            /> -->
+
+          <!--   <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/c2_grey" /> -->
+
+            <com.globalroam.widgets.GRTextViewPlus
+                android:id="@+id/_ok_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                  android:paddingLeft="@dimen/px_30_dip"
+                android:paddingRight="@dimen/px_30_dip"
+                   android:paddingTop="@dimen/dialog_cancle_ok_padding_top"
+                android:paddingBottom="@dimen/dialog_cancle_ok_padding_bottom"
+                android:text="OK"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_58_px"
+                 />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

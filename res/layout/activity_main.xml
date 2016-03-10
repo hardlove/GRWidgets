@@ -31,6 +31,17 @@
             globalroam:outLineColor="#fff000" />
     </LinearLayout>
      -->
+
+    <Button
+        android:onClick="OKCancelDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示OK Cancle Dialog" />
+    <Button
+        android:onClick="OKDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示OK Cancle Dialog" />
      
      <TextView 
          android:layout_width="0dp"
