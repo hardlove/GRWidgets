@@ -40,13 +40,13 @@ public abstract class BaseActivity extends FragmentActivity {
 		Log.i(TAG, "onCreate~~~");
 		
 		registerReceiver();
-		initView();
+		initView(savedInstanceState);
 		loadDatas();
 		
 	}
 	
 	
-	protected abstract void initView();
+	protected abstract void initView(Bundle savedInstanceState);
 	protected abstract void loadDatas();
 	protected abstract void registerReceiver();
 	protected abstract void unRegisterReceiver();

@@ -1,8 +1,8 @@
 package com.globalroam.utils.network;
 
+import java.util.Map;
+
 import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 
 public class HttpUtils {
 
@@ -12,13 +12,7 @@ public class HttpUtils {
 	 * @return
 	 */
 	public static boolean isNetWorkConnected(Context context) {
-		ConnectivityManager connMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-		if (networkInfo != null && networkInfo.isConnected()) {
-			return true;
-		} else {
-			return false;
-		}
+		return NetWorkUtils.isNetWorkConnected(context);
 		
 	}
 	
@@ -29,26 +23,14 @@ public class HttpUtils {
 	 */
 	public static int getCurrentNetWorkType(Context context) {
 
-		ConnectivityManager connMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-		if (networkInfo != null && networkInfo.isConnected()) {
-			int type = networkInfo.getType();
-			switch (type) {
-			case ConnectivityManager.TYPE_MOBILE:
-				return 0;
-
-			case ConnectivityManager.TYPE_WIFI:
-
-				return 1;
-
-			default:
-				return 2;
-			}
-
-		} else {
-			return -1;
-		}
-
+		return NetWorkUtils.getCurrentNetWorkType(context);
+	}
+	
+	
+	
+	public static String createParamsUrl(String baseUrl,Map<String, String> params){
+		
+		return null;
 	}
 
 }

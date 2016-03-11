@@ -17,6 +17,7 @@ public class MainActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		BaseFragment fragment = new BaseFragment();
 		
 		testNetWork();
 		
@@ -59,7 +60,7 @@ public class MainActivity extends BaseActivity {
 	}
 
 	@Override
-	protected void initView() {
+	protected void initView(Bundle savedInstanceState) {
 		// ImageView iv = (ImageView) findViewById(R.id.circle_image);
 		// iv.setImageResource(R.drawable.im_2);
 

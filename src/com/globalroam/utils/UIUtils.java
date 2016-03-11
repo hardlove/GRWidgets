@@ -383,10 +383,8 @@ public class UIUtils {
 	 * @return 平板返回 True，手机返�? False
 	 */
 	public static boolean isTablet(Context context) {
-		if (false) {
-			return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
-		}
-		return false;
+		return (context.getResources().getConfiguration().screenLayout
+				& Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
 	}
 	
 	/** 
