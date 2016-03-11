@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null" >
+    <TextView
+        android:id="@+id/_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/px_21"
+        android:background="@drawable/dialog_top_title"
+        android:drawablePadding="@dimen/px_6"
+        android:gravity="center"
+        android:singleLine="true"
+        android:padding="@dimen/option_title_dialog_text_padding"
+        android:text="title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_58_px" />
+    <ListView
+        android:id="@+id/_list_view"
+       android:layout_below="@+id/_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:listSelector="@null"
+        android:scrollingCache="false" />
+    <TextView
+        android:id="@+id/_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/_list_view"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/px_19"
+        android:background="@drawable/dialog_delete_btn"
+        android:drawablePadding="@dimen/px_6"
+        android:gravity="center"
+    	android:padding="@dimen/option_title_dialog_text_padding"
+        android:text="@string/cancel"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_58_px" />
+</RelativeLayout>

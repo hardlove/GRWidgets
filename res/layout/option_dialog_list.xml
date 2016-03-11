@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null" >
+
+    <ListView
+        android:id="@+id/_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:listSelector="@null"
+        android:scrollingCache="false" />
+
+    <TextView
+        android:id="@+id/_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/_list_view"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/px_19"
+        android:background="@drawable/dialog_delete_btn"
+        android:drawablePadding="@dimen/px_6"
+        android:gravity="center"
+        android:paddingBottom="@dimen/option_dialog_cancle_text_padding"
+        android:paddingLeft="@dimen/px_33"
+        android:paddingRight="@dimen/px_33"
+        android:paddingTop="@dimen/option_dialog_cancle_text_padding"
+        android:text="@string/cancel"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_58_px" />
+
+</RelativeLayout>

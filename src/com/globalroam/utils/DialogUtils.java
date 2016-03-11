@@ -2,23 +2,27 @@ package com.globalroam.utils;
 
 import com.globalroam.widgets.GRDialogPlus;
 import com.globalroam.widgets.GRTextViewPlus;
+import com.globalroam.widgets.OptionTitleDialog;
 import com.globalroam.widgets.R;
 
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface.OnDismissListener;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class DialogUtils {
-	
+
 	public interface CancelListener {
 
 		void onClick(View v);
 
 	}
-
 
 	public interface OkListener {
 
@@ -26,120 +30,141 @@ public class DialogUtils {
 
 	}
 
+	/**
+	 * æ˜¾ç¤ºä¸€ä¸ªå¸¦æœ‰OKæŒ‰é’®çš„Dialog
+	 * 
+	 * @param context
+	 * @param title Dialogçš„æ ‡é¢˜ï¼Œå¦‚æœä¼ å…¥nullï¼Œåˆ™ä¸æ˜¾ç¤ºtitleéƒ¨åˆ†
+	 * @param content Dialogçš„å†…å®¹ä¿¡æ¯
+	 */
+	public static Dialog showOKDialog(Context context, String title, String content) {
+
+		return showOKDialog(context, title, content, null);
+
+	}
 
 	/**
-	 * ÏÔÊ¾Ö»ÓĞÒ»¸öOK°´Å¥µÄ¶Ô»°¿ò£¬µã»÷OK°´Å¥²»×öÈÎºÎ´¦Àí
+	 * æ˜¾ç¤ºä¸€ä¸ªå¸¦æœ‰OKæŒ‰é’®çš„Dialog
+	 * 
 	 * @param context
-	 * @param title:±êÌâ£¬´«ÈënullÊ±£¬²»ÏÔÊ¾title
-	 * @param content:ÏÔÊ¾µÄÌáÊ¾ÄÚÈİ
+	 * @param title Dialogçš„æ ‡é¢˜ï¼Œå¦‚æœä¼ å…¥nullï¼Œåˆ™ä¸æ˜¾ç¤ºtitleéƒ¨åˆ†
+	 * @param content Dialogçš„å†…å®¹ä¿¡æ¯
+	 * @param okListenter ç‚¹å‡»OKæŒ‰é’®çš„å›è°ƒ
 	 */
-	public static Dialog showOKDialog(Context context,String title,String content){
-		
-		return showOKDialog(context, title, content, null);
-		
-	}
-	
-	/**
-	 * ÏÔÊ¾Ö»ÓĞÒ»¸öOK°´Å¥µÄ¶Ô»°¿ò
-	 * @param context
-	 * @param title:±êÌâ£¬´«ÈënullÊ±£¬²»ÏÔÊ¾title
-	 * @param content:ÏÔÊ¾µÄÌáÊ¾ÄÚÈİ
-	 * @param okListenter:µã»÷°´Å¥µÄ»Øµ÷
-	 */
-	public static Dialog showOKDialog(Context context,String title,String content,final OkListener okListenter){
-		final GRDialogPlus dialog = new GRDialogPlus(context,R.style.customdialog);
+	public static Dialog showOKDialog(Context context, String title, String content, final OkListener okListenter) {
+		final GRDialogPlus dialog = new GRDialogPlus(context, R.style.customDialog);
 		View root = LayoutInflater.from(context).inflate(R.layout.dialog_ok_layout, null);
 		dialog.setContentView(root);
-		
+
 		GRTextViewPlus okButton = (GRTextViewPlus) root.findViewById(R.id._ok_button);
 		okButton.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				dialog.dismiss();
-				if(okListenter!=null){
+				if (okListenter != null) {
 					okListenter.onClick(v);
 				}
-				
+
 			}
 		});
-		
+
 		GRTextViewPlus titleTextView = (GRTextViewPlus) root.findViewById(R.id._title);
-		if(TextUtils.isEmpty(title)){
+		if (TextUtils.isEmpty(title)) {
 			titleTextView.setVisibility(View.GONE);
-		}else{
+		} else {
 			titleTextView.setText(title);
 			titleTextView.setVisibility(View.VISIBLE);
 		}
-		
+
 		GRTextViewPlus contentTextView = (GRTextViewPlus) root.findViewById(R.id._reason);
 		contentTextView.setText(content);
-		
+
 		dialog.show();
-		
+
 		return dialog;
 	}
-	
-	
+
 	/**
-	 * ÏÔÊ¾Ö»ÓĞÒ»¸öÓĞOKºÍCancelµÄ¶Ô»°¿ò
+	 * æ˜¾ç¤ºä¸€ä¸ªå¸¦æœ‰OKå’ŒCancelæŒ‰é’®çš„Dialog
+	 * 
 	 * @param context
+	 * @param title Dialogçš„æ ‡é¢˜ï¼Œå¦‚æœä¼ å…¥nullï¼Œåˆ™ä¸æ˜¾ç¤ºtitleéƒ¨åˆ†
+	 * @param content Dialogçš„å†…å®¹ä¿¡æ¯
+	 * @param okListenter ç‚¹å‡»OKæŒ‰é’®çš„å›è°ƒ
+	 * @param cancelListener ç‚¹å‡»CancelæŒ‰é’®çš„å›è°ƒ
 	 */
-	public static Dialog showOKCancelDialog(Context context, String title,String content,final OkListener okListenter,final CancelListener cancelListener){
-		final GRDialogPlus dialog = new GRDialogPlus(context,R.style.customdialog);
+	public static Dialog showOKCancelDialog(Context context, String title, String content, final OkListener okListenter,
+			final CancelListener cancelListener) {
+		final GRDialogPlus dialog = new GRDialogPlus(context, R.style.customDialog);
 		View root = LayoutInflater.from(context).inflate(R.layout.dialog_ok_cancel_layout, null);
 		dialog.setContentView(root);
-		
+
 		GRTextViewPlus okButton = (GRTextViewPlus) root.findViewById(R.id._ok_button);
 		okButton.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				dialog.dismiss();
-				if(okListenter!=null){
+				if (okListenter != null) {
 					okListenter.onClick(v);
 				}
-				
+
 			}
 		});
-		
+
 		GRTextViewPlus cancelButton = (GRTextViewPlus) root.findViewById(R.id._cancel_button);
 		cancelButton.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				dialog.dismiss();
-				if(cancelListener!=null){
+				if (cancelListener != null) {
 					cancelListener.onClick(v);
 				}
-				
+
 			}
 		});
-		
+
 		GRTextViewPlus titleTextView = (GRTextViewPlus) root.findViewById(R.id._title);
-		if(TextUtils.isEmpty(title)){
+		if (TextUtils.isEmpty(title)) {
 			titleTextView.setVisibility(View.GONE);
-		}else{
+		} else {
 			titleTextView.setText(title);
 			titleTextView.setVisibility(View.VISIBLE);
 		}
-		
+
 		GRTextViewPlus contentTextView = (GRTextViewPlus) root.findViewById(R.id._reason);
 		contentTextView.setText(content);
-		
+
 		dialog.show();
-		
+
 		return dialog;
-		
-		
-		
+
 	}
-	
-	public static void showItemsDialog(Context context,String title,String[] items){
-		
+
+	/**
+	 * æ˜¾ç¤ºä¸€ä¸ªèœå•é€‰é¡¹çš„Dialog
+	 * @param context
+	 * @param title Dialogçš„æ ‡é¢˜
+	 * @param items èœå•æ çš„items
+	 * @param v  è§¦å‘æ˜¾ç¤ºçš„View
+	 * @param itemClickListener itemsçš„ç›‘å¬
+	 * @return
+	 */
+	public static Dialog showItemsDialog(Context context, String title, String[] items, View v,
+			final OnItemClickListener itemClickListener) {
+		OptionTitleDialog dialog = OptionTitleDialog.Builder(context, title, items, v, itemClickListener);
+		dialog.show();
+		return dialog;
 	}
-	
-	
-	
+
+	public static Dialog showItemsDialog(Context context, String title, String[] items, View v,
+			final OnItemClickListener itemClickListener, final OnDismissListener dismissListener) {
+		OptionTitleDialog dialog = OptionTitleDialog.Builder(context, title, items, v, itemClickListener,
+				dismissListener);
+		dialog.show();
+		return dialog;
+	}
 
 }
