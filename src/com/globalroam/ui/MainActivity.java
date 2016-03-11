@@ -1,12 +1,14 @@
 package com.globalroam.ui;
 
 import com.globalroam.utils.DialogUtils;
+import com.globalroam.utils.NetWorkUtils;
 import com.globalroam.utils.DialogUtils.OkListener;
 import com.globalroam.widgets.BaseActivity;
 import com.globalroam.widgets.R;
 import com.globalroam.widgets.R.layout;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
@@ -32,6 +34,16 @@ public class MainActivity extends BaseActivity {
 		// Toast.makeText(MainActivity.this, s.toString(), 0).show();
 		// }
 		// });
+		
+		testNetWork();
+		
+	}
+
+	private void testNetWork() {
+		boolean isConnected = NetWorkUtils.isNetWorkConnected(this);
+		Log.i(TAG, "当前网络连接状态："+(isConnected?"连接":"未连接"));
+		int type = NetWorkUtils.getCurrentNetWorkType(this);
+		Log.i(TAG, "当前的网路类型："+NetWorkUtils.convertNetWorkType(type));
 	}
 
 	public void OKDialog(View v) {

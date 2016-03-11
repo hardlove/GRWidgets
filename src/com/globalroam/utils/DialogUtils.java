@@ -5,8 +5,6 @@ import com.globalroam.widgets.GRTextViewPlus;
 import com.globalroam.widgets.OptionTitleDialog;
 import com.globalroam.widgets.R;
 
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface.OnDismissListener;
@@ -36,6 +34,7 @@ public class DialogUtils {
 	 * @param context
 	 * @param title Dialog的标题，如果传入null，则不显示title部分
 	 * @param content Dialog的内容信息
+	 * @return 创建的Dialog对象
 	 */
 	public static Dialog showOKDialog(Context context, String title, String content) {
 
@@ -50,6 +49,7 @@ public class DialogUtils {
 	 * @param title Dialog的标题，如果传入null，则不显示title部分
 	 * @param content Dialog的内容信息
 	 * @param okListenter 点击OK按钮的回调
+	 * @return 创建的Dialog对象
 	 */
 	public static Dialog showOKDialog(Context context, String title, String content, final OkListener okListenter) {
 		final GRDialogPlus dialog = new GRDialogPlus(context, R.style.customDialog);
@@ -84,7 +84,7 @@ public class DialogUtils {
 
 		return dialog;
 	}
-
+	
 	/**
 	 * 显示一个带有OK和Cancel按钮的Dialog
 	 * 
@@ -93,6 +93,7 @@ public class DialogUtils {
 	 * @param content Dialog的内容信息
 	 * @param okListenter 点击OK按钮的回调
 	 * @param cancelListener 点击Cancel按钮的回调
+	 * @return 创建的Dialog对象
 	 */
 	public static Dialog showOKCancelDialog(Context context, String title, String content, final OkListener okListenter,
 			final CancelListener cancelListener) {
@@ -150,7 +151,7 @@ public class DialogUtils {
 	 * @param items 菜单栏的items
 	 * @param v  触发显示的View
 	 * @param itemClickListener items的监听
-	 * @return
+	 * @return 创建的 Dialog对象
 	 */
 	public static Dialog showItemsDialog(Context context, String title, String[] items, View v,
 			final OnItemClickListener itemClickListener) {
@@ -159,6 +160,15 @@ public class DialogUtils {
 		return dialog;
 	}
 
+	/**
+	 * 显示一个菜单选项的Dialog
+	 * @param context
+	 * @param title Dialog的标题
+	 * @param items 菜单栏的items
+	 * @param v  触发显示的View
+	 * @param itemClickListener items的监听
+	 * @return 创建的 Dialog对象
+	 */
 	public static Dialog showItemsDialog(Context context, String title, String[] items, View v,
 			final OnItemClickListener itemClickListener, final OnDismissListener dismissListener) {
 		OptionTitleDialog dialog = OptionTitleDialog.Builder(context, title, items, v, itemClickListener,
