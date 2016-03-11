@@ -1,4 +1,4 @@
-package com.globalroam.utils;
+package com.globalroam.utils.network;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

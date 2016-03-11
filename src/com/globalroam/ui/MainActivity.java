@@ -2,8 +2,7 @@ package com.globalroam.ui;
 
 import com.globalroam.utils.DialogUtils;
 import com.globalroam.utils.DialogUtils.OkListener;
-import com.globalroam.utils.NetWorkUtils;
-import com.globalroam.widgets.BaseActivity;
+import com.globalroam.utils.network.NetWorkUtils;
 import com.globalroam.widgets.R;
 
 import android.os.Bundle;

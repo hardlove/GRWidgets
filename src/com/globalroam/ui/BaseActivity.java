@@ -1,4 +1,4 @@
-package com.globalroam.widgets;
+package com.globalroam.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
