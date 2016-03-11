@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
-public class BaseActivity extends FragmentActivity {
+public abstract class BaseActivity extends FragmentActivity {
 
 
 	public static String TAG = null;
 	/**
-	 * 截取包名，只保留类名
+	 * 鎴彇鍖呭悕锛屽彧淇濈暀绫诲悕
 	 */
 	@Override
 	public String getLocalClassName() {
@@ -38,7 +38,21 @@ public class BaseActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		TAG = getLocalClassName();
 		Log.i(TAG, "onCreate~~~");
+		
+		registerReceiver();
+		initView();
+		loadDatas();
+		
 	}
+	
+	
+	protected abstract void initView();
+	protected abstract void loadDatas();
+	protected abstract void registerReceiver();
+	protected abstract void unRegisterReceiver();
+	
+	
+	
 	
 	@Override
 	protected void onStart() {
@@ -94,6 +108,7 @@ public class BaseActivity extends FragmentActivity {
 		// TODO Auto-generated method stub
 		super.onDestroy();
 		Log.i(TAG, "onDestroy~~~");
+		registerReceiver();
 	}
 
 	@Override
