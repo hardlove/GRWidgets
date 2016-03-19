@@ -26,6 +26,7 @@ import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpProtocolParams;
+import org.apache.http.protocol.HTTP;
 
 /**
  * @author Administrator 注意所导入的包，故将引入的包也贴上，防止错误。
@@ -68,6 +69,7 @@ public class HttpsUtils {
 						DEFAULT_SOCKET_BUFFER_SIZE);
 
 				HttpProtocolParams.setVersion(httpParams, HttpVersion.HTTP_1_1);
+				HttpProtocolParams.setContentCharset(httpParams, HTTP.UTF_8);
 				HttpProtocolParams.setUserAgent(httpParams, String
 						.format("thinkandroid/%s (http://www.thinkandroid.cn)",
 								VERSION));

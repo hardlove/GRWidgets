@@ -73,7 +73,7 @@ public class HttpUtils {
 	}
 
 	private static AsyncHttpClient client = new AsyncHttpClient();
-	public static final int TIME_OUT = 1000 * 3;
+	public static final int TIME_OUT = 1000 * 30;
 	static{
 		client.setTimeout(TIME_OUT);//设置响应超时
 	}
