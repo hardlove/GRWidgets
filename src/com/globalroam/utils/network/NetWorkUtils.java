@@ -44,7 +44,7 @@ public class NetWorkUtils {
 	/**
 	 * 检查当前连接的网络类型
 	 * @param context
-	 * @return  0：Mobile网路；1：Wifi网络；2：其它类型的网络；-1：没有连接到网络
+	 * @return  0：Mobile网路；1：Wifi网络；-1：没有连接到网络
 	 */
 	public static int getCurrentNetWorkType(Context context) {
 
