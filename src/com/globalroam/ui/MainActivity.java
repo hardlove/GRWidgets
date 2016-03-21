@@ -1,5 +1,10 @@
 package com.globalroam.ui;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.globalroam.adapter.Bean;
+import com.globalroam.adapter.GRBaseAdapter;
 import com.globalroam.utils.DialogUtils;
 import com.globalroam.utils.DialogUtils.OkListener;
 import com.globalroam.utils.network.NetWorkUtils;
@@ -9,9 +14,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends BaseActivity {
+
+	private GRBaseAdapter adapter;
+	private List<Bean> mDatas;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +68,21 @@ public class MainActivity extends BaseActivity {
 
 		);
 	}
-
+	
+	
+	public void addListView(View v){
+		ListView lv = (ListView) findViewById(R.id.listView);
+		if(adapter == null){
+			if(mDatas==null){
+				mDatas = new ArrayList<Bean>();
+			}
+			adapter = new GRBaseAdapter(mDatas, this, R.layout.list_item_sigle);
+		}
+		lv.setAdapter(adapter);
+		ArrayList<Bean> temp = new ArrayList<Bean>();
+		temp.add(new Bean("我是数据源"));
+		adapter.addDatas(temp);
+	}
 	@Override
 	protected void initView(Bundle savedInstanceState) {
 		// ImageView iv = (ImageView) findViewById(R.id.circle_image);

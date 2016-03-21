@@ -61,5 +61,17 @@
         android:layout_height="wrap_content"
         android:onClick="ItemsDialog"
         android:text="显示Items Dialog" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addListView"
+        android:text="加载ListView" />
+    <ListView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        >
+        
+    </ListView>
 
 </LinearLayout>
