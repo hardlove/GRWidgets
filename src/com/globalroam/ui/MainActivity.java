@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 public class MainActivity extends BaseActivity {
 
-	private GRBaseAdapter adapter;
+	private MyAdapter adapter;
 	private List<Bean> mDatas;
 
 	@Override
