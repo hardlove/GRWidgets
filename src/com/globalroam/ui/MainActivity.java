@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.globalroam.adapter.Bean;
-import com.globalroam.adapter.GRBaseAdapter;
 import com.globalroam.utils.DialogUtils;
 import com.globalroam.utils.DialogUtils.OkListener;
 import com.globalroam.utils.network.NetWorkUtils;
@@ -14,7 +13,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 

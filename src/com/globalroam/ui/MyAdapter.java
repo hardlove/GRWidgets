@@ -2,14 +2,12 @@ package com.globalroam.ui;
 
 import java.util.List;
 
-import android.content.Context;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.globalroam.adapter.Bean;
 import com.globalroam.adapter.GRBaseAdapter;
 import com.globalroam.adapter.ViewHolder;
 import com.globalroam.widgets.R;
+
+import android.content.Context;
 
 public class MyAdapter extends GRBaseAdapter<Bean> {
 
