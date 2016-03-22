@@ -1,4 +1,4 @@
-package com.globalroam.adapter;
+package com.globalroam.adapter.base;
 
 import android.content.Context;
 import android.graphics.Bitmap;

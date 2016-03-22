@@ -1,4 +1,4 @@
-package com.globalroam.adapter;
+package com.globalroam.adapter.base;
 
 /**
  * 所有Item数据的父类

@@ -2,9 +2,9 @@ package com.globalroam.ui;
 
 import java.util.List;
 
-import com.globalroam.adapter.Bean;
-import com.globalroam.adapter.GRBaseAdapter;
-import com.globalroam.adapter.ViewHolder;
+import com.globalroam.adapter.base.Bean;
+import com.globalroam.adapter.base.GRBaseAdapter;
+import com.globalroam.adapter.base.ViewHolder;
 import com.globalroam.widgets.R;
 
 import android.content.Context;

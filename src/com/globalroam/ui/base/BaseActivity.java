@@ -1,4 +1,4 @@
-package com.globalroam.ui;
+package com.globalroam.ui.base;
 
 import android.content.Intent;
 import android.os.Bundle;

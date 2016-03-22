@@ -3,7 +3,9 @@ package com.globalroam.ui;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.globalroam.adapter.Bean;
+import com.globalroam.adapter.base.Bean;
+import com.globalroam.ui.base.BaseActivity;
+import com.globalroam.ui.base.BaseFragment;
 import com.globalroam.utils.DialogUtils;
 import com.globalroam.utils.DialogUtils.OkListener;
 import com.globalroam.utils.network.NetWorkUtils;

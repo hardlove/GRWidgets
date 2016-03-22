@@ -1,6 +1,6 @@
 package com.globalroam.login;
 
-import com.globalroam.ui.BaseActivity;
+import com.globalroam.ui.base.BaseActivity;
 
 import android.os.Bundle;
 

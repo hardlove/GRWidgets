@@ -1,4 +1,4 @@
-package com.globalroam.adapter;
+package com.globalroam.adapter.base;
 
 import java.util.List;
 
