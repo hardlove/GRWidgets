@@ -10,7 +10,9 @@ import com.globalroam.utils.DialogUtils;
 import com.globalroam.utils.DialogUtils.OkListener;
 import com.globalroam.utils.network.NetWorkUtils;
 import com.globalroam.widgets.R;
+import com.umeng.socialize.editorpage.ShareActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -86,6 +88,10 @@ public class MainActivity extends BaseActivity {
 		ArrayList<Bean> temp = new ArrayList<Bean>();
 		temp.add(new Bean("我是数据源"));
 		adapter.addDatas(temp);
+	}
+	
+	public void share(View v){
+		startActivity(new Intent(this, MyShareActivity.class));
 	}
 
 	@Override

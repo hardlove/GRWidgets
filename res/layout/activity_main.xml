@@ -66,6 +66,11 @@
         android:layout_height="wrap_content"
         android:onClick="addListView"
         android:text="加载ListView" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="share"
+        android:text="分享" />
     <ListView 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,8 +1,9 @@
 package com.globalroam.adapter.base;
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,19 +26,15 @@ public class ViewHolder {
 		return mPosition;
 	}
 
-	private ViewHolder(Context context, ViewGroup parent, int layoutId,
-			int position) {
+	private ViewHolder(Context context, ViewGroup parent, int layoutId, int position) {
 		mViews = new SparseArray<View>();
 
-		mConvertView = LayoutInflater.from(context).inflate(layoutId, parent,
-				false);
+		mConvertView = LayoutInflater.from(context).inflate(layoutId, parent, false);
 		this.mPosition = position;
-
 		mConvertView.setTag(this);
 	}
 
-	public static ViewHolder get(Context context, View convertView,
-			ViewGroup parent, int layoutId, int position) {
+	public static ViewHolder get(Context context, View convertView, ViewGroup parent, int layoutId, int position) {
 		ViewHolder holder = null;
 		if (convertView == null) {
 			holder = new ViewHolder(context, parent, layoutId, position);
@@ -97,6 +94,7 @@ public class ViewHolder {
 
 	/**
 	 * 给ImageView设置Bitmap
+	 * 
 	 * @param viewId
 	 * @param resId
 	 * @return
@@ -108,17 +106,19 @@ public class ViewHolder {
 		}
 		return this;
 	}
-	
+
 	/**
 	 * 给ImageView设置uri
+	 * 
 	 * @param viewId
 	 * @param resId
 	 * @return
 	 */
-	public ViewHolder setImageResource(int viewId, Uri uri) {
+	public ViewHolder setImageResource(int viewId, String uri) {
 		View view = getView(viewId);
 		if (view instanceof ImageView) {
-			((ImageView) view).setImageURI(uri);
+			ImageLoader loader = ImageLoader.getInstance();
+			loader.displayImage(uri, (ImageView) view);
 		}
 		return this;
 	}
