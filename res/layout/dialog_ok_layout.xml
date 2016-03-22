@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:splitMotionEvents="false" >
 
-    <com.globalroam.widgets.GRTextViewPlus
+    <com.globalroam.messageplus.widgets.GRTextViewPlus
         android:id="@+id/_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         android:textSize="@dimen/text_size_54_px"
         />
 
-    <com.globalroam.widgets.GRTextViewPlus
+    <com.globalroam.messageplus.widgets.GRTextViewPlus
         android:id="@+id/_reason"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <com.globalroam.widgets.GRTextViewPlus
+        <com.globalroam.messageplus.widgets.GRTextViewPlus
             android:id="@+id/_ok_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

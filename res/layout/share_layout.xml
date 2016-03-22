@@ -10,4 +10,14 @@
         android:text="打开分享面板"
         android:onClick="openSharePlan"
         />
+    <Button android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="授权"
+        android:onClick="doAuth"
+        />
+    <Button android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解除授权"
+        android:onClick="deleteAuth"
+        />
 </LinearLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.globalroam.widgets"
+    package="com.globalroam.messageplus"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -10,7 +10,7 @@
     
     <!-- <uses-permission android:name="android.permission.INTERNET" /> -->
   <!--   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
-    <instrumentation android:name="android.test.InstrumentationTestRunner" android:targetPackage="com.globalroam.widgets"></instrumentation><uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <instrumentation android:name="android.test.InstrumentationTestRunner" android:targetPackage="com.globalroam.messageplus"></instrumentation><uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -26,16 +26,25 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    
+    <!-- renren sso Permission for Unit Test -->
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
 
     <application
-        android:name="com.globalroam.application.GRApplication"
+        android:name=".application.GRApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <uses-library android:name="android.test.runner"/>
         <activity
-            android:name="com.globalroam.ui.MainActivity"
+            android:name=".ui.MainActivity" 
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,15 +53,15 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="com.globalroam.ui.MyShareActivity"></activity>
+        <activity android:name=".ui.MyShareActivity"></activity>
         
-        
+        <!-- ******************************以下为友盟分享的配置******************************************** -->
         <!-- 分享功能  针对不同平台需要添加的数据 -->
-       <!-- above activity that demo required,has nothing to with umeng sdk  -->
+        
         <!-- *************************    related to Share START **************************** -->
         <!-- Share edit page-->
-        <activity
-            android:name=".WBShareActivity"
+        <activity 
+            android:name=".share.WBShareActivity"  
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -68,7 +77,7 @@
         </activity>
         <!-- 易信回调activity -->
         <activity
-            android:name=".yxapi.YXEntryActivity"
+            android:name=".share.yxapi.YXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenLayout"
             android:exported="true"
             android:screenOrientation="portrait"
@@ -82,14 +91,14 @@
             />
         <!-- wechat callback-->
         <activity
-            android:name=".wxapi.WXEntryActivity"
+            android:name=".share.wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenLayout"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!-- alipay callback-->
         <activity
-            android:name=".apshare.ShareEntryActivity"
+            android:name=".share.ShareEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenLayout"
             android:exported="true"
             android:screenOrientation="portrait"
@@ -121,6 +130,21 @@
             android:required="false" />
         <uses-library android:name="android.test.runner" />
         <!-- facebook -->
+        <!-- <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        1104087112943046
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider487692214752558"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" /> -->
+        <!-- twitter -->
         <activity
             android:name="com.umeng.socialize.handler.TwitterWebActivity"
             android:configChanges=
@@ -128,6 +152,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:label="@string/app_name" />
         <!-- *************************     related to Share END **************************** -->
+        
         <!-- umengAppKey，replace to yours -->
         <meta-data
             android:name="UMENG_APPKEY"
@@ -138,7 +163,9 @@
             android:value="Umeng" >
         </meta-data>
         <service android:name="com.sina.weibo.sdk.net.DownloadService"
-            android:exported="false"></service>
+            android:exported="false"></service>	
+        <!-- ******************************以上为友盟分享的配置******************************************** -->
+      
 </application>
 
 </manifest>

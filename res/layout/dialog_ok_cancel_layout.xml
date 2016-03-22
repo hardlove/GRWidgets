@@ -14,7 +14,7 @@
         android:gravity="center"
         android:orientation="vertical" >
 
-        <com.globalroam.widgets.GRTextViewPlus
+        <com.globalroam.messageplus.widgets.GRTextViewPlus
             android:id="@+id/_title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
             android:textSize="@dimen/text_size_50_px"
             android:visibility="visible" />
 
-        <com.globalroam.widgets.GRTextViewPlus
+        <com.globalroam.messageplus.widgets.GRTextViewPlus
             android:id="@+id/_reason"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
 
-            <com.globalroam.widgets.GRTextViewPlus
+            <com.globalroam.messageplus.widgets.GRTextViewPlus
                 android:id="@+id/_cancel_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/c2_grey" />
 
-            <com.globalroam.widgets.GRTextViewPlus
+            <com.globalroam.messageplus.widgets.GRTextViewPlus
                 android:id="@+id/_ok_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
