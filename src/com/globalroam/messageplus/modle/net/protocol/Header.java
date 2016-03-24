@@ -41,6 +41,9 @@ public class Header {
 	 * @param body 完整的body（明文）
 	 */
 	public void serializerHeader(XmlSerializer serializer, String body){
+		if(serializer == null){
+			throw new IllegalArgumentException("serializer can be null.");
+		}
 		//将timestamp、messengerid、digest设置数据
 		SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmss");
 		String time = format.format(new Date());
