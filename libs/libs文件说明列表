@@ -1,0 +1,15 @@
+1. google官方的网络异步请求库
+android-async-http-1.4.4.jar   
+
+2. 腾讯Bugly的库
+bugly_crash_release__2.0.jar
+libBugly.so 
+
+3. 图片加载器
+universal-image-loader-1.9.5.jar
+
+4. xUtils框架
+xUtils-2.4.6.jar
+
+5. json框架
+gson-2.2.4.jar
