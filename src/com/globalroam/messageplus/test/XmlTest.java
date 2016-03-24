@@ -6,11 +6,12 @@ import java.io.Writer;
 
 import org.xmlpull.v1.XmlSerializer;
 
-import com.globalroam.messageplus.constants.ConstantValue;
-import com.globalroam.messageplus.modle.net.protocol.elementImpl.UserLoginElement;
-
 import android.test.AndroidTestCase;
 import android.util.Xml;
+
+import com.globalroam.messageplus.constants.ConstantValue;
+import com.globalroam.messageplus.modle.net.protocol.elementImpl.UserLoginElement;
+import com.umeng.socialize.utils.Log;
 
 public class XmlTest extends AndroidTestCase {
 	
@@ -29,6 +30,7 @@ public class XmlTest extends AndroidTestCase {
 			login.serializableElement(serializer);
 			
 			serializer.endDocument();
+			Log.i("============"+writer.toString()+"============");
 			
 			
 		} catch (IllegalArgumentException e) {

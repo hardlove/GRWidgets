@@ -16,10 +16,10 @@ public abstract class Element {
 	/**
 	 * 存放所有用到的叶子的容器
 	 */
-	private List<Leaf> list;
+	private List<Leaf> list = new ArrayList<Leaf>();
+	private String tagName = "element";
 	public Element(){
-		list = new ArrayList<Leaf>();
-		initLeafList(list);
+		
 	}
 	/**
 	 * 不会将所有的请求用到的叶子放到Element
@@ -34,17 +34,20 @@ public abstract class Element {
 	 * @param serializer
 	 */
 	public void serializableElement(XmlSerializer serializer){
+		
+		initLeafList(list);//将子类需要序列化的叶子放在容器中
+		
 		if(serializer == null){
 			throw new IllegalArgumentException("serializer can be null.");
 		}
 		try {
-			serializer.startTag(null, "element");
+			serializer.startTag(null, tagName);
 			for (Leaf leaf : list) {
 				if(leaf != null){
 					leaf.serialize(serializer);
 				}
 			}
-			serializer.endTag(null, "element");
+			serializer.endTag(null, tagName);
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 		} catch (IllegalStateException e) {
