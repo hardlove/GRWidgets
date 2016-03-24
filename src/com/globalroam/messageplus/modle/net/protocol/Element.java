@@ -1,6 +1,11 @@
 package com.globalroam.messageplus.modle.net.protocol;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.xmlpull.v1.XmlSerializer;
+
 
 /**
  * 请求数据的封装
@@ -8,7 +13,14 @@ import org.xmlpull.v1.XmlSerializer;
  *
  */
 public abstract class Element {
-	
+	/**
+	 * 存放所有用到的叶子的容器
+	 */
+	private List<Leaf> list;
+	public Element(){
+		list = new ArrayList<Leaf>();
+		initLeafList(list);
+	}
 	/**
 	 * 不会将所有的请求用到的叶子放到Element
 	 * Element将作为所有请求的代表，Element所有请求的公共部分
@@ -21,10 +33,36 @@ public abstract class Element {
 	 * 每个请求都需要序列化自己
 	 * @param serializer
 	 */
-	public abstract void serializableElement(XmlSerializer serializer);
+	public void serializableElement(XmlSerializer serializer){
+		if(serializer == null){
+			throw new IllegalArgumentException("serializer can be null.");
+		}
+		try {
+			serializer.startTag(null, "element");
+			for (Leaf leaf : list) {
+				if(leaf != null){
+					leaf.serialize(serializer);
+				}
+			}
+			serializer.endTag(null, "element");
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		} catch (IllegalStateException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	};
 	
 	public abstract  String getTransactionType();
 	
+	
+	/**
+	 * 将需要用到的叶子全部装到容器中
+	 * @param list Element中需要序列化的叶子
+	 * @return
+	 */
+	public abstract List<Leaf> initLeafList(List<Leaf> list);
 	
 	// 包含内容
 	// 序列化

@@ -1,7 +1,7 @@
 package com.globalroam.messageplus.application;
 
+import com.tencent.bugly.crashreport.CrashReport;
 import com.umeng.socialize.PlatformConfig;
-import com.umeng.socialize.UMShareAPI;
 
 import android.app.Application;
 import android.content.ComponentCallbacks;
@@ -14,11 +14,22 @@ public class GRApplication extends Application {
 		// TODO Auto-generated method stub
 		super.onCreate();
 		
+		BuglyInit();
 		SocialShareInit();
 		
 
 	}
 
+	/**
+	 * 用户腾讯Bugly的初始化（跟踪App Crash日志，方便在后台分析，提升应用性能）
+	 */
+	private void BuglyInit() {
+		CrashReport.initCrashReport(getApplicationContext(), "900023021", false);
+	}
+
+	/**
+	 * 友盟社会化分享组件初始化
+	 */
 	private void SocialShareInit() {
 		SocialSDKInit();
 		
@@ -31,9 +42,9 @@ public class GRApplication extends Application {
 	 * 友盟分析，初始化配置
 	 */
 	private void SocialSDKInit() {
-		PlatformConfig.setWeixin("wx967daebe835fbeac", "5bb696d9ccd75a38c8a0bfe0675559b3");
+		PlatformConfig.setWeixin("wx6280135d1d9d733c", "7f32e9dd2d9b3785c55c878e1a8b7d3b");
 		// 微信 appid appsecret
-		PlatformConfig.setSinaWeibo("624321006", "98f6becfda60b5c688f74b21b6b51405");// 已更换
+		PlatformConfig.setSinaWeibo("624321006", "98f6becfda60b5c688f74b21b6b51405");//已修改
 		// 新浪微博 appkey appsecret
 		PlatformConfig.setQQZone("100424468", "c7394704798a158208a74ab60104f0ba");
 		// QQ和Qzone appid appkey

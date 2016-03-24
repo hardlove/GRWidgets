@@ -7,6 +7,7 @@ import java.io.Writer;
 import org.xmlpull.v1.XmlSerializer;
 
 import com.globalroam.messageplus.constants.ConstantValue;
+import com.globalroam.messageplus.modle.net.protocol.elementImpl.UserLoginElement;
 
 import android.test.AndroidTestCase;
 import android.util.Xml;
@@ -14,7 +15,7 @@ import android.util.Xml;
 public class XmlTest extends AndroidTestCase {
 	
 	
-	void createXML() {
+	public void createXMLTest() {
 		
 		XmlSerializer serializer = Xml.newSerializer();
 		Writer writer = new StringWriter();
@@ -23,6 +24,9 @@ public class XmlTest extends AndroidTestCase {
 		try {
 			serializer.setOutput(writer );
 			serializer.startDocument(ConstantValue.ENCODING,null);
+			
+			UserLoginElement login = new UserLoginElement();
+			login.serializableElement(serializer);
 			
 			serializer.endDocument();
 			

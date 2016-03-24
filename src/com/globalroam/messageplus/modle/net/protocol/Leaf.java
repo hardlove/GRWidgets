@@ -49,9 +49,12 @@ public class Leaf {
 	 * @param serializer
 	 */
 	public void serialize(XmlSerializer serializer){
-		
+		if(serializer == null){
+			throw new IllegalArgumentException("serializer can be null.");
+		}
 		try {
 			serializer.startTag(null, tagName);
+			//处理序列化的一个bug，防止tagValue为空时crash
 			if(tagValue == null){
 				tagValue = "";
 			}
