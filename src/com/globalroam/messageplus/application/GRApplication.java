@@ -1,7 +1,7 @@
 package com.globalroam.messageplus.application;
 
+import com.tencent.bugly.crashreport.CrashReport;
 import com.umeng.socialize.PlatformConfig;
-import com.umeng.socialize.UMShareAPI;
 
 import android.app.Application;
 import android.content.ComponentCallbacks;
@@ -14,11 +14,22 @@ public class GRApplication extends Application {
 		// TODO Auto-generated method stub
 		super.onCreate();
 		
+		BuglyInit();
 		SocialShareInit();
 		
 
 	}
 
+	/**
+	 * 用户腾讯Bugly的初始化（跟踪App Crash日志，方便在后台分析，提升应用性能）
+	 */
+	private void BuglyInit() {
+		CrashReport.initCrashReport(getApplicationContext(), "900023021", false);
+	}
+
+	/**
+	 * 友盟社会化分享组件初始化
+	 */
 	private void SocialShareInit() {
 		SocialSDKInit();
 		
