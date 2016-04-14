@@ -96,6 +96,14 @@ public class BaseFragment extends Fragment {
 		Log.i(TAG, "onViewCreated~~");
 	}
 	
-	
+	//============================================================================
+	/**
+	 * 如果输入法已经打开，则关闭
+	 */
+	protected void closeInputMethd(){
+		if(isAdded()){
+			getActivity().closeOptionsMenu();
+		}
+	}
 
 }

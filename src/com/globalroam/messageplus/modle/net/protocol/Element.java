@@ -34,7 +34,7 @@ public abstract class Element {
 	 * @param serializer
 	 */
 	public void serializableElement(XmlSerializer serializer){
-		
+		list.clear();
 		initLeafList(list);//将子类需要序列化的叶子放在容器中
 		
 		if(serializer == null){

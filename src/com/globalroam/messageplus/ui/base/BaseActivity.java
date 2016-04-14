@@ -1,5 +1,8 @@
 package com.globalroam.messageplus.ui.base;
 
+
+import com.globalroam.messageplus.utils.UIUtils;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -118,5 +121,18 @@ public abstract class BaseActivity extends FragmentActivity {
 		Log.i(TAG, "onTrimMemory~~~");
 	}
 	
-
+	//Activity转场动画
+	@Override
+	public void overridePendingTransition(int enterAnim, int exitAnim) {
+		// TODO Auto-generated method stub
+		super.overridePendingTransition(enterAnim, exitAnim);
+	}
+	
+	//============================================================================
+	/**
+	 * 如果输入法已经打开，则关闭
+	 */
+	public void closeInputMethd() {
+		UIUtils.closeInputMethod(this);
+	}
 }

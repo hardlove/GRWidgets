@@ -24,6 +24,7 @@ import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
@@ -410,5 +411,28 @@ public class UIUtils {
 	        return true;  
 	    }  
 	    return false;  
-	}  
+	} 
+	
+	
+	/**
+	 * 关闭输入法
+	 * @param activity
+	 */
+	public static void closeInputMethod(Activity activity) {
+
+		// hide input method and emotion mothod
+		InputMethodManager inputMethodManager = (InputMethodManager)activity. getSystemService(Context.INPUT_METHOD_SERVICE);
+		// switch input status
+		if (inputMethodManager.isActive()) {
+			try {
+				inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(),
+						InputMethodManager.HIDE_NOT_ALWAYS);
+			} catch (Exception e) {
+				inputMethodManager.toggleSoftInput(
+						InputMethodManager.SHOW_IMPLICIT,
+						InputMethodManager.HIDE_NOT_ALWAYS);
+			}
+		}
+
+	}
 }
